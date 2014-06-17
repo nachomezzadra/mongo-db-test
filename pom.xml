@@ -3,10 +3,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.github.nachomezzadra</groupId>
-	<artifactId>activemq-client</artifactId>
+	<artifactId>mongo-db-test</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>ActiveMQ client</name>
+	<name>MongoDB Test</name>
 	<description>MongoDB test project</description>
 
 	<url>https://github.com/nachomezzadra/mongo-db-test</url>
