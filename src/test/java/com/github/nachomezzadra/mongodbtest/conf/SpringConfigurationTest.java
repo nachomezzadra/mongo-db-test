@@ -8,12 +8,11 @@ import org.springframework.context.ApplicationContext;
 
 import com.github.nachomezzadra.mongodbtest.BaseSpringTest;
 
-public class SpringConfigurationTest extends BaseSpringTest  {
+public class SpringConfigurationTest extends BaseSpringTest {
 
 	@Autowired
 	ApplicationContext context;
 
-	
 	@Test
 	public void shouldProperlyLoadSpringContext() throws Exception {
 		assertNotNull(this.context);

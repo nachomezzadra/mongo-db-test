@@ -23,13 +23,14 @@
 		<log4j-version>1.2.15</log4j-version>
 		<junit-version>4.11</junit-version>
 		<spring-version>4.0.3.RELEASE</spring-version>
+		<spring-data-mongodb-version>1.5.0.RELEASE</spring-data-mongodb-version>
 		<mongodb-version>2.10.1</mongodb-version>
+		<mongodb-embedded-version>1.46.0</mongodb-embedded-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<dependencyManagement>
 		<dependencies>
-
 			<!-- Spring -->
 			<dependency>
 				<groupId>org.springframework</groupId>
@@ -50,10 +51,11 @@
 			</dependency>
 
 			<dependency>
-				<groupId>org.springframework</groupId>
-				<artifactId>spring-jms</artifactId>
-				<version>${spring-version}</version>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-mongodb</artifactId>
+				<version>${spring-data-mongodb-version}</version>
 			</dependency>
+
 
 			<!-- Logging -->
 			<dependency>
@@ -75,11 +77,17 @@
 			</dependency>
 
 			<!-- Mongo DB -->
-            <dependency>
-                <groupId>org.mongodb</groupId>
-                <artifactId>mongo-java-driver</artifactId>
-                <version>${mongodb-version}</version>
-            </dependency>
+			<dependency>
+				<groupId>org.mongodb</groupId>
+				<artifactId>mongo-java-driver</artifactId>
+				<version>${mongodb-version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>de.flapdoodle.embed</groupId>
+				<artifactId>de.flapdoodle.embed.mongo</artifactId>
+				<version>${mongodb-embedded-version}</version>
+			</dependency>
 
 			<!-- Test -->
 			<dependency>
@@ -103,8 +111,8 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-jms</artifactId>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-mongodb</artifactId>
 		</dependency>
 
 		<dependency>
@@ -112,10 +120,15 @@
 			<artifactId>slf4j-api</artifactId>
 		</dependency>
 
-        <dependency>
-            <groupId>org.mongodb</groupId>
-            <artifactId>mongo-java-driver</artifactId>
-        </dependency>
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongo-java-driver</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>de.flapdoodle.embed</groupId>
+			<artifactId>de.flapdoodle.embed.mongo</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>junit</groupId>
